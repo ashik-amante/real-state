@@ -1,23 +1,42 @@
+import { useContext } from "react";
 import Navber from "../Shared/Navber/Navber";
 import { useForm } from "react-hook-form"
+import { AuthContext } from "../../Firebase/FirebaseProvider";
+import { Link, useNavigate } from "react-router-dom";
+
 
 
 const Register = () => {
+    const {createUser,} = useContext(AuthContext)
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit,
         formState: { errors },
       } = useForm()
       const onSubmit = (data) => {
-        const {email,password} = data
+        const {email,password} = data;
+        // create user
+        createUser(email,password)
+        .then(result=>{
+            console.log(result.user);
+            navigate('/')
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+
+       
         console.log(data)
       }
+    
+
     
     return (
 
         <div className="">
             <Navber></Navber>
-           <h1 className="text-5xl font-bold text-center mt-20">Register now!</h1>
+           <h1 className="text-5xl font-bold text-center mt-20">Register Here!</h1>
             <form  onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 md:w-2/3 mx-auto">
                 <div className="form-control">
                     <label className="label">
@@ -58,6 +77,8 @@ const Register = () => {
                 <div className="form-control mt-6">
                     <button className="btn btn-primary">Login</button>
                 </div>
+                <p className="px-4">Already have an account? <Link to='/login'><button className="ml-4 font-bold text-green-500 text-[17px]">Log In</button></Link> </p>
+               
             </form>
         </div>
     );

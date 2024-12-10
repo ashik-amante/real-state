@@ -1,8 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import './nav.css'
+import { useContext } from "react";
+import { AuthContext } from "../../../Firebase/FirebaseProvider";
+import userDemo from '../../../assets/user.png'
 
 
 const Navber = () => {
+    const {user,logOut} = useContext(AuthContext)
+     //   user Log Out
+     const handleLogOut = ()=>{
+        logOut()
+    }
     const navlinks = <div>
         <nav>
         <NavLink to='/'>Home</NavLink>
@@ -44,7 +52,14 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login'><button className="btn">Login</button></Link>
+                {
+                    user ? <div className="flex items-center">
+                        <img className="rounded-full w-14" src={user?.photoURL ? user.photoURL : userDemo } alt='Photo' />
+                        <Link to='/login'><button  onClick={handleLogOut} className="btn">Log Out</button></Link>
+                    </div>: 
+                    <Link to='/login'><button className="btn">Login</button></Link>
+                }
+                
             </div>
         </div>
     );
