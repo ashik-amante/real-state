@@ -1,0 +1,22 @@
+a.active{
+    background-color: rgb(20, 184, 20);
+    
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 5px  15px;
+    border-radius: 5px;
+   
+}
+nav a{
+    margin-right: 15px;
+    font-size: 17px;
+    color: white;
+    font-weight: 500;
+    padding: 5px  15px;
+    border-radius: 5px;
+}
+nav a:hover{
+  border-bottom: 3px solid rgb(204, 16, 16);
+  transition:ease-in-out;
+}
