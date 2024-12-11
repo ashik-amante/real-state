@@ -1,8 +1,10 @@
 import { useContext } from "react";
-import Navber from "../Shared/Navber/Navber";
+
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../Firebase/FirebaseProvider";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -19,6 +21,7 @@ const Register = () => {
         // create user
         createUser(email,password)
         .then(result=>{
+            toast.success('User created Successfully!!')
             console.log(result.user);
             navigate('/')
         })
@@ -35,7 +38,7 @@ const Register = () => {
     return (
 
         <div className="">
-            <Navber></Navber>
+
            <h1 className="text-5xl font-bold text-center mt-20">Register Here!</h1>
             <form  onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 md:w-2/3 mx-auto">
                 <div className="form-control">
@@ -80,6 +83,7 @@ const Register = () => {
                 <p className="px-4">Already have an account? <Link to='/login'><button className="ml-4 font-bold text-green-500 text-[17px]">Log In</button></Link> </p>
                
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

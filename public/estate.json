@@ -1,0 +1,77 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Modern Single-Family Home",
+      "segment_name": "Single-Family Home",
+      "description": "A spacious 3-bedroom home with a beautiful garden and a modern interior.",
+      "price": 350000,
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "Los Angeles, CA",
+      "facilities": ["Living Room", "Swimming Pool", "Kitchen"],
+      "image": "https://i.ibb.co.com/X3S01Tc/h1.jpg"
+    },
+
+    {
+      "id": 2,
+      "estate_title": "Cozy Townhouse",
+      "segment_name": "Townhouse",
+      "description": "A charming 2-bedroom townhouse located in a friendly neighborhood.",
+      "price": 1800,
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Austin, TX",
+      "facilities": ["Living Room", "Kitchen"],
+      "image": "https://i.ibb.co.com/X3S01Tc/h1.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Luxury Apartment",
+      "segment_name": "Apartment",
+      "description": "A premium 3-bedroom apartment with stunning city views and amenities.",
+      "price": 2500,
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "New York, NY",
+      "facilities": ["Living Room", "Swimming Pool", "Kitchen"],
+      "image": "https://i.ibb.co.com/Fq6mW0m/banner-property-1.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Student Housing Complex",
+      "segment_name": "Student Housing",
+      "description": "Affordable and comfortable housing for students, close to campus.",
+      "price": 600,
+      "status": "rent",
+      "area": "800 sq ft",
+      "location": "Cambridge, MA",
+      "facilities": ["Living Room", "Kitchen"],
+      "image": "https://i.ibb.co.com/PjvvCTr/banner-property-2.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Senior Living Community",
+      "segment_name": "Senior Living",
+      "description": "A serene and secure community designed for senior citizens.",
+      "price": 2000,
+      "status": "sale",
+      "area": "1200 sq ft",
+      "location": "Scottsdale, AZ",
+      "facilities": ["Living Room", "Swimming Pool", "Kitchen"],
+      "image": "https://i.ibb.co.com/X3S01Tc/h1.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Vacation Beachfront Villa",
+      "segment_name": "Vacation Rental",
+      "description": "A luxurious beachfront villa ideal for vacations with family or friends.",
+      "price": 5000,
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Miami, FL",
+      "facilities": ["Living Room", "Swimming Pool", "Kitchen"],
+      "image": "https://i.ibb.co.com/X3S01Tc/h1.jpg"
+    }
+  
+  ]
+  

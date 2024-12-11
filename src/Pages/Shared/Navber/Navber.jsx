@@ -14,9 +14,8 @@ const Navber = () => {
     const navlinks = <div>
         <nav>
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='/login'>Update Profile</NavLink>
-        <NavLink to='/register'>Register</NavLink>
-        <NavLink to='/profile'>User Profile</NavLink>
+        {/* <NavLink to='/login'>Update Profile</NavLink> */}
+        <NavLink to='/profile'>Update Profile</NavLink>
         </nav>
 
     </div>
@@ -54,7 +53,7 @@ const Navber = () => {
             <div className="navbar-end">
                 {
                     user ? <div className="flex items-center">
-                        <img className="rounded-full w-14" src={user?.photoURL ? user.photoURL : userDemo } alt='Photo' />
+                        <img className="rounded-full w-12" src={user?.photoURL ? user.photoURL : userDemo } alt='Photo' />
                         <Link to='/login'><button  onClick={handleLogOut} className="btn">Log Out</button></Link>
                     </div>: 
                     <Link to='/login'><button className="btn">Login</button></Link>

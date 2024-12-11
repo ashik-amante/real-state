@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Navber from "../Shared/Navber/Navber";
+
 import { AuthContext } from "../../Firebase/FirebaseProvider";
 
 
@@ -22,7 +22,7 @@ const Profile = () => {
 
     return (
         <div className="max-w-7xl mx-auto">
-            <Navber></Navber>
+            
             <div className="grid grid-cols-3 mt-20">
                 <div className="grid col-span-2">
                     <div className="p-10 space-y-4">
@@ -30,7 +30,7 @@ const Profile = () => {
                         <p className="text-[18px] font-semibold">
                             Email : <span className="font-bold text-xl">{user?.email}</span>
                         </p>
-                        <p className="">Photo Url:{user?.photoURL} </p>
+                        <p className="">Photo Url : {user?.photoURL} </p>
                     </div>
                 </div>
                 <div className="grid col-span-1">
