@@ -23,7 +23,7 @@ const Profile = () => {
     return (
         <div className="max-w-7xl mx-auto">
             
-            <div className="grid grid-cols-3 mt-20">
+            <div className="grid md:grid-cols-3 mt-20">
                 <div className="grid col-span-2">
                     <div className="p-10 space-y-4">
                         <h1 className="text-5xl font-bold">{user?.displayName}</h1>

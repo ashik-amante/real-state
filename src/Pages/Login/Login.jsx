@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../Firebase/FirebaseProvider";
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../Firebase/Firebase.config";
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,6 +11,7 @@ const Login = () => {
     const {logIn,googleSignIn} = useContext(AuthContext)
     const navigate = useNavigate()
     const [loginError,setLoginerror] = useState(null)
+    const location = useLocation()
     const {
         register,
         handleSubmit,
@@ -23,7 +24,7 @@ const Login = () => {
         logIn(email,password)
         .then(result=>{
             toast.success('Login Successfull  !!')
-            navigate('/')
+            navigate(location?.state ? location.state : '/')
             console.log(result.user);
         })
         .catch(error=>{
