@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "image": "https://example.com/image1.jpg",
+      "title": "Morning Walk",
+      "interval": "7:00 AM - 8:00 AM"
+    },
+    {
+      "id": 2,
+      "image": "https://example.com/image2.jpg",
+      "title": "Team Meeting",
+      "interval": "10:00 AM - 11:00 AM"
+    },
+    {
+      "id": 3,
+      "image": "https://example.com/image3.jpg",
+      "title": "Lunch Break",
+      "interval": "1:00 PM - 2:00 PM"
+    },
+    {
+      "id": 4,
+      "image": "https://example.com/image4.jpg",
+      "title": "Evening Yoga",
+      "interval": "6:00 PM - 7:00 PM"
+    }
+  ]
+  

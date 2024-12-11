@@ -16,22 +16,22 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className="max-w-7xl mx-auto">
+            <div className="container mx-auto">
                 <h1 className="text-5xl font-bold text-center mt-12">Properties Available</h1>
-                <div className="grid grid-cols-3 mt-10 border  gap-5">
+                <div className="grid grid-cols-3 mt-10   gap-10">
                     {
                         houses.map(house => <div key={house.id} >
                             <div className=" border rounded-xl  ">
-                                <div className="flex justify-center items-center py-2">
+                                <div className="flex justify-center items-center py-3">
                                     <img className="w-96 rounded-xl " src={house.image} alt="" />
                                 </div>
                                 <div className="mb-4 flex justify-around items-center mt-5">
                                     <p className="text-xl font-semibold">{house.segment_name}</p>
                                     <button className="   bg-gray-600 text-2xl px-8 py-2 rounded-lg font-bold text-white">{house.status}</button>
                                 </div>
-                                <hr />
+                                <hr  className=""/>
                                 <div className="p-4">
-                                    <Link to={`/house/${house.id}`}><button className="btn w-full bg-green-500 text-white font-bold text-xl hover:bg-green-700">View Details</button></Link>
+                                    <Link to={`/house/${house.id}`}><button className="btn w-full bg-green-500 text-white font-bold text-xl hover:bg-green-700">View Property</button></Link>
                                 </div>
                             </div>
                         </div>)
